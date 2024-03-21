@@ -1,0 +1,16 @@
+<section class="parent">
+  <h2 class="title--secondary">Peek-A-Boo</h2>
+  <button type="button" (click)="toggleChild()">
+    {{ hasChild ? "Destroy" : "Create" }} PeekABooComponent
+  </button>
+  <button type="button" (click)="updateHero()">Update Hero</button>
+  <div class="info">
+    <app-peek-aboo *ngIf="hasChild" [name]="heroName"></app-peek-aboo>
+    <h3 class="title--teritary">Lifecycle Hook Log</h3>
+    <ul class="logs">
+      <ng-template ngFor let-msg [ngForOf]="hookLog">
+        <li class="log">{{ msg }}</li>
+      </ng-template>
+    </ul>
+  </div>
+</section>
