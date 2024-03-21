@@ -1,0 +1,9 @@
+<div>
+    <p>{{hero.name}} can {{power}}</p>
+    <h3>Change Log</h3>
+    <ul>
+      <ng-template ngFor let-chg [ngForOf]="changeLog">
+        <li>{{chg}}</li>
+      </ng-template>
+    </ul>
+</div>
