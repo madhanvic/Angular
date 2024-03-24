@@ -1,0 +1,16 @@
+<section>
+  <h2>AfterView</h2>
+  <app-after-view *ngIf="show"></app-after-view>
+
+  <div>
+    <h3>AfterView logs</h3>
+    <button type="button" (click)="reset()">Reset</button>
+    <ul>
+      <ng-template ngFor let-msg [ngForOf]="logger.logs">
+        <li>
+          {{ msg }}
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</section>
